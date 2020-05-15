@@ -1,0 +1,71 @@
+# vscode related shenanigans
+!.vscode/settings.json      text diff=json
+!.vscode/tasks.json         text diff=json
+!.vscode/launch.json        text diff=json
+!.vscode/extensions.json    text diff=json
+*.code-workspace            text diff=json
+
+# scripts
+*.py    text diff=python
+
+# python compiled
+*.db    binary
+*.p     binary
+*.pkl   binary
+*.pyc   binary
+*.pyd   binary
+*.pyo   binary
+
+# prerequisites
+*.d     text 
+
+# source files
+*.c     text diff=c
+*.cc    text diff=cpp
+*.cxx   text diff=cpp
+*.cpp   text diff=cpp
+*.c++   text diff=cpp
+
+# include files
+*.h     text diff=c
+*.hh    text diff=cpp
+*.hpp   text diff=cpp
+*.h++   text diff=cpp
+
+# compiled object files
+*.slo   binary
+*.lo    binary
+*.o     binary
+*.obj   binary
+
+# precompiled headers
+*.gch   binary
+*.pch   binary
+
+# compiled dlls
+*.so    binary
+*.dylib binary
+*.dll   binary
+
+# modules
+*.mod   binary
+*.inc   binary
+*.smod  binary
+
+# executables
+*.exe   binary
+*.out   binary
+*.app   binary
+
+# config files for the bootloader
+*.cfg   text
+
+# built image files and boot files
+*.bin   binary
+*.iso   binary
+*.img   binary
+*.raw   binary
+
+.gitattributes  export-ignore
+.gitignore      export-ignore
+.gitmodules     export-ignore

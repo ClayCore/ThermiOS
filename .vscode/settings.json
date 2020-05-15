@@ -1,0 +1,15 @@
+{
+    "material-icon-theme.folders.associations": {
+        "opt": "dist",
+        "cross": "dist",
+        "sysroot": "mappings",
+        "toolchain": "core"
+    },
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 80,
+    "prettier.quoteProps": "consistent",
+    "python.autoComplete.addBrackets": true,
+    "python.formatting.autopep8Args": ["--max-line-length=170"],
+    "python.linting.enabled": true
+}

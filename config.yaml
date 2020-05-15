@@ -1,0 +1,40 @@
+# Main configuration file for the build
+# Also sets up the build configuration
+
+--- # The name of the final mapped executable and bootable image
+program_name: 'ThermiOS'
+version: '0.0.1'
+
+setup:
+    arch: 'i686'
+    target: 'i686-elf'
+    prefix: 'opt'
+    sysroot: 'sysroot'
+
+    # Necessary for setting up cross-compiling
+    gcc_version: '9.1.0'
+    binutils_version: '2.33.1'
+
+build_debug:
+    flags:
+        [
+            '-ffreestanding',
+            '-fno-exceptions',
+            '-fno-rtti',
+            '-O2',
+            '-std=c++20',
+            '-Wall',
+            '-Wextra',
+        ]
+
+build_release:
+    flags:
+        [
+            '-ffreestanding',
+            '-fno-exceptions',
+            '-fno-rtti',
+            '-O2',
+            '-std=c++20',
+            '-Wall',
+            '-Wextra',
+        ]

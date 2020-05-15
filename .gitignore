@@ -1,0 +1,67 @@
+# vscode related shenanigans
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# toochain directories
+toolchain/build/
+toolchain/downloads/
+toolchain/src/
+
+# cross-compile environment
+opt/
+
+# sysroot directory
+sysroot/
+
+# libraries
+/libs/
+
+# python bytecode and cache
+*__pycache__
+*.pyc
+
+# prerequisites
+*.d
+
+# compiled object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# precompiled headers
+*.gch
+*.pch
+
+# compiled dlls
+*.so
+*.dylib
+*.dll
+
+# modules
+*.mod
+*.inc
+*.smod
+
+# compiled static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# executables
+*.exe
+*.out
+*.app
+
+# config files for the bootloader
+*.cfg
+
+# built image files and boot files
+*.bin
+*.iso
+*.img
+*.raw
