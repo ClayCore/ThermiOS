@@ -7,13 +7,13 @@ We only cover Linux-based environments here.
 Debian/Ubuntu:
 
 ```bash
-sudo apt install build-essential curl libmpfr-dev libmpc-dev libgmp-dev e2fsprogs qemu-system-i386 qemu-utils
+sudo apt install build-essential curl libmpfr-dev libmpc-dev libgmp-dev e2fsprogs qemu-system-i386 qemu-utils tar
 ```
 
 Arch Linux:
 
 ```bash
-sudo pacman -S base-devel curl mpfr libmpc gmp e2fsprogs qemu qemu-arch-extra
+sudo pacman -S base-devel curl mpfr libmpc gmp e2fsprogs qemu qemu-arch-extra tar
 ```
 
 For running scripts you may require the following libraries:
@@ -41,6 +41,20 @@ It contains all necessary metadata for the `/scripts/setup.py` script.
 -   `sysroot` is the system root of the operating system, which is also where the system libraries and headers will be installed to
 -   `gcc_version` and `binutils_version` are the version the setup script will install. Make sure they're actually compatible with each other and can be used in a cross-compile environment.
 -   `build flags` will be the build flags for the compiler.
+
+## Environmental variables
+
+For the following commands and consequenently, the commands that they spawn, to do their job successfully, you have to update your environmental variables **before** running these scripts:
+
+-   `$PREFIX` is the directory where your built toolchain will live, the default is present in the `/config.yaml` file and it's set to `/opt/`. Note that this is not your operating system's root `opt` directory, rather the project root.
+-   `$TARGET` is the target architecture. The script will read this from the `/config.yaml`, so don't worry about it too much, but it's better to be safe and copy the default, which is `i686-elf` and export it as that env var.
+-   `$PATH` must include the `$PREFIX/bin` directory
+
+```bash
+export PREFIX = <path to project root>/opt
+export TARGET = i686-elf
+export PATH = $PREFIX/bin:$PATH
+```
 
 ## Running the setup and build scripts
 

@@ -1,8 +1,8 @@
 # vscode related shenanigans
-!.vscode/settings.json      text diff=json
-!.vscode/tasks.json         text diff=json
-!.vscode/launch.json        text diff=json
-!.vscode/extensions.json    text diff=json
+.vscode/settings.json       text diff=json
+.vscode/tasks.json          text diff=json
+.vscode/launch.json         text diff=json
+.vscode/extensions.json     text diff=json
 *.code-workspace            text diff=json
 
 # scripts

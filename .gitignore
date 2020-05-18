@@ -16,8 +16,8 @@ opt/
 # sysroot directory
 sysroot/
 
-# libraries
-/libs/
+# build directory
+build/
 
 # python bytecode and cache
 *__pycache__
